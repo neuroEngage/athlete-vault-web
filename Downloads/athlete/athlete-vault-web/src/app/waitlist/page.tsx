@@ -106,8 +106,14 @@ export default function Waitlist() {
                                 Share with your teammates to move up the list.
                             </p>
                             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '1rem' }}>
-                                <button className="btn btn-outline" onClick={() => navigator.clipboard.writeText('https://athletevault.com')}>Copy Link</button>
-                                <button className="btn btn-primary">Share on WhatsApp</button>
+                                <button className="btn btn-outline" onClick={() => {
+                                    navigator.clipboard.writeText(window.location.origin);
+                                    alert('Link copied to clipboard!');
+                                }}>Copy Link</button>
+                                <button className="btn btn-primary" onClick={() => {
+                                    const text = "Check out AthleteVault! I just joined the waitlist to get discovered by top coaches and brands. Join me here: " + window.location.origin;
+                                    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+                                }}>Share on WhatsApp</button>
                             </div>
                         </div>
                     </div>

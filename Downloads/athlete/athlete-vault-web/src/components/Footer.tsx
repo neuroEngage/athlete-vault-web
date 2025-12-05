@@ -8,10 +8,10 @@ export default function Footer() {
                 <div className={styles.footerCol}>
                     <h4>Product</h4>
                     <ul>
-                        <li><Link href="/features">Features</Link></li>
-                        <li><Link href="/pricing">Pricing</Link></li>
+                        <li><Link href="/#features">Features</Link></li>
+                        <li><Link href="/recruiters#pricing">Pricing</Link></li>
                         <li><Link href="/how-it-works">How It Works</Link></li>
-                        <li><Link href="/ai-scouting">AI Scouting</Link></li>
+                        <li><Link href="/how-it-works#ai-analysis">AI Scouting</Link></li>
                     </ul>
                 </div>
                 <div className={styles.footerCol}>
@@ -19,16 +19,16 @@ export default function Footer() {
                     <ul>
                         <li><Link href="/how-it-works">How It Works</Link></li>
                         <li><Link href="/success-stories">Success Stories</Link></li>
-                        <li><Link href="/faq">FAQ</Link></li>
-                        <li><Link href="/resources">Resources</Link></li>
+                        <li><Link href="/#faq">FAQ</Link></li>
+                        <li><Link href="/blog">Resources</Link></li>
                     </ul>
                 </div>
                 <div className={styles.footerCol}>
                     <h4>Recruiters</h4>
                     <ul>
                         <li><Link href="/recruiters">Find Athletes</Link></li>
-                        <li><Link href="/recruiters/pricing">Pricing</Link></li>
-                        <li><Link href="/recruiters/demo">Demo Request</Link></li>
+                        <li><Link href="/recruiters#pricing">Pricing</Link></li>
+                        <li><Link href="/contact">Demo Request</Link></li>
                         <li><Link href="/login">Recruiter Login</Link></li>
                     </ul>
                 </div>
