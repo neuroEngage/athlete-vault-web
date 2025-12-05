@@ -1,0 +1,297 @@
+/* Hero Section */
+.hero {
+    padding: 8rem 1.5rem 4rem;
+    background: var(--color-bg-dark);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(33, 128, 225, 0.1), transparent 60%);
+    animation: pulse 10s infinite ease-in-out;
+    pointer-events: none;
+}
+
+.title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Journey Section (Timeline) */
+.journeySection {
+    padding: 6rem 0;
+    background: var(--color-bg-dark);
+    position: relative;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-50%);
+}
+
+.step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+.stepContent {
+    width: 45%;
+    background: var(--color-bg-primary);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 1;
+}
+
+.stepVisual {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stepNumber {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: var(--color-bg-dark);
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    font-weight: bold;
+    z-index: 2;
+}
+
+.step.reverse {
+    flex-direction: row-reverse;
+}
+
+.stepTitle {
+    color: var(--color-text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.stepDesc {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.stepList {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.stepList li {
+    color: var(--color-text-secondary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stepList li::before {
+    content: '✓';
+    color: var(--color-success);
+}
+
+/* Feature Deep Dives */
+.featuresSection {
+    padding: 6rem 0;
+    background: var(--color-bg-secondary);
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+.featureGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.featureCard {
+    background: var(--color-bg-primary);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.featureIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.featureCard h3 {
+    color: var(--color-text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.featureCard h4 {
+    color: var(--color-text-tertiary);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+/* Metrics Section */
+.metricsSection {
+    padding: 6rem 0;
+    background: var(--color-bg-dark);
+}
+
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.metricCard {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+}
+
+.metricNumber {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.metricLabel {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+/* CTA Section */
+.ctaSection {
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, #0F1419, #1A202C);
+    text-align: center;
+}
+
+.ctaTitle {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.ctaGroup {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .step {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 50px;
+    }
+
+    .step.reverse {
+        flex-direction: column;
+    }
+
+    .stepContent,
+    .stepVisual {
+        width: 100%;
+    }
+
+    .stepNumber {
+        left: 20px;
+        transform: translate(-50%, 0);
+        top: 0;
+    }
+
+    .featureGrid,
+    .metricsGrid {
+        grid-template-columns: 1fr;
+    }
+}

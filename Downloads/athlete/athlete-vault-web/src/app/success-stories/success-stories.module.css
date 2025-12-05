@@ -1,0 +1,315 @@
+/* Hero Section */
+.hero {
+    padding: 8rem 1.5rem 4rem;
+    background: var(--color-bg-dark);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(33, 128, 225, 0.1), transparent 60%);
+    animation: pulse 10s infinite ease-in-out;
+    pointer-events: none;
+}
+
+.title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Featured Stories Section */
+.storiesSection {
+    padding: 6rem 0;
+    background: var(--color-bg-dark);
+}
+
+.storyRow {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    margin-bottom: 8rem;
+    align-items: center;
+}
+
+.storyRow:last-child {
+    margin-bottom: 0;
+}
+
+.storyCard {
+    background: rgba(23, 184, 198, 0.05);
+    border: 2px solid var(--color-primary);
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.storyCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(23, 184, 198, 0.1);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2180E1, #17B8C6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    /* Ensure image stays within circle */
+}
+
+.athleteInfo h3 {
+    color: var(--color-text-primary);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.athleteMeta {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    margin-bottom: 2rem;
+}
+
+.statsBox {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.statItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+.statItem:last-child {
+    margin-bottom: 0;
+}
+
+.statIcon {
+    color: var(--color-success);
+}
+
+/* Timeline (Right Side) */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timelineItem:last-child {
+    margin-bottom: 0;
+}
+
+.timelineItem::before {
+    content: '';
+    position: absolute;
+    left: -2.4rem;
+    /* Adjust based on border width and padding */
+    top: 0.4rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-bg-dark);
+    border: 2px solid var(--color-primary);
+}
+
+.timelineDate {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-tertiary);
+    margin-bottom: 0.25rem;
+}
+
+.timelineEvent {
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+/* Impact Section */
+.impactSection {
+    padding: 6rem 0;
+    background: var(--color-bg-secondary);
+}
+
+.impactGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.impactCard {
+    background: var(--color-bg-primary);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.impactCard h3 {
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.impactList {
+    list-style: none;
+}
+
+.impactList li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+.impactCount {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Quotes Grid */
+.quotesSection {
+    padding: 6rem 0;
+    background: var(--color-bg-dark);
+}
+
+.quotesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.quoteCard {
+    background: var(--color-bg-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.quoteCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.miniQuote {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.quoteAuthor {
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* CTA Section */
+.ctaSection {
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, #0F1419, #1A202C);
+    text-align: center;
+}
+
+.ctaTitle {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.ctaGroup {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .storyRow {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .timeline {
+        margin-left: 1rem;
+    }
+
+    .impactGrid,
+    .quotesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .impactGrid,
+    .quotesGrid {
+        grid-template-columns: 1fr;
+    }
+}

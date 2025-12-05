@@ -1,0 +1,280 @@
+.container {
+    min-height: 100vh;
+    padding-top: 5rem;
+    /* Navbar height */
+    background: var(--color-bg-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.splitLayout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+/* Left Side: Form */
+.formSection {
+    background: var(--color-bg-primary);
+    border: 1px solid rgba(23, 184, 198, 0.2);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.formHeader {
+    margin-bottom: 2rem;
+}
+
+.formTitle {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.formSubtitle {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+}
+
+.socialProofCounter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-success);
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: rgba(39, 174, 96, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.input {
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.875rem 1rem;
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(23, 184, 198, 0.2);
+    background: #1E2838;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-primary);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 0.5rem;
+    box-shadow: 0 10px 30px rgba(23, 184, 198, 0.3);
+}
+
+.submitButton:hover {
+    background: #1FCDD3;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(23, 184, 198, 0.4);
+}
+
+.submitButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.terms {
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Right Side: Content */
+.contentSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.testimonialCarousel {
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 4px solid var(--color-primary);
+}
+
+.testimonialQuote {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #F5F5F5;
+}
+
+.testimonialAuthor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.authorAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.authorInfo h4 {
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.authorInfo span {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+}
+
+.benefitsList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.benefitItem h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.benefitItem p {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+.fomoSection {
+    background: rgba(255, 107, 53, 0.1);
+    border: 1px solid var(--color-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.fomoTitle {
+    color: var(--color-secondary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.progressBar {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(to right, #FF6B35, #F39C12);
+    width: 75%;
+    /* Dynamic */
+    border-radius: 4px;
+}
+
+/* Success State */
+.successContainer {
+    text-align: center;
+    padding: 2rem;
+}
+
+.successIcon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.successTitle {
+    font-size: 2rem;
+    color: var(--color-success);
+    margin-bottom: 1rem;
+}
+
+.waitlistPosition {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+}
+
+.positionNumber {
+    color: var(--color-primary);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .splitLayout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contentSection {
+        order: -1;
+        /* Show content first on mobile/tablet? Or form first? Spec says stacked. */
+    }
+}
