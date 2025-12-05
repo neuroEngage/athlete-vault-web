@@ -15,10 +15,10 @@ export default function Waitlist() {
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    // Social proof counter (simulated)
     const [waitlistCount, setWaitlistCount] = useState(12847);
-    const [position, setPosition] = useState<number | null>(null);
 
-    // Simulate live counter
+    // Simulate live counter for social proof only
     useEffect(() => {
         const interval = setInterval(() => {
             setWaitlistCount(prev => prev + Math.floor(Math.random() * 3));
@@ -50,15 +50,14 @@ export default function Waitlist() {
                 ]);
 
             if (dbError) {
-                // If table doesn't exist, we'll just simulate success for the user
-                // but log the error for the developer
-                console.warn('Supabase error (likely table missing):', dbError);
+                console.warn('Supabase error:', dbError);
+                // We continue to success state even if DB fails, to not block the user experience
+                // In a real app, you might want to handle this differently
             }
 
-            // 2. Simulate success state
+            // 2. Show success state
             setTimeout(() => {
                 setSuccess(true);
-                setPosition(waitlistCount + 1);
                 setLoading(false);
             }, 1000);
 
@@ -80,9 +79,25 @@ export default function Waitlist() {
                             Welcome to the future of sports discovery. We've sent a confirmation email to <strong>{formData.email}</strong>.
                         </p>
 
-                        <div className={styles.waitlistPosition}>
-                            <div>Your Position</div>
-                            <div className={styles.positionNumber}>#{position?.toLocaleString()}</div>
+                        {/* Heartwarming Message */}
+                        <div style={{
+                            background: 'rgba(23, 184, 198, 0.1)',
+                            border: '1px solid var(--color-primary)',
+                            borderRadius: '12px',
+                            padding: '2rem',
+                            margin: '2rem 0'
+                        }}>
+                            <h3 style={{
+                                color: 'var(--color-primary)',
+                                fontSize: '1.5rem',
+                                marginBottom: '0.5rem',
+                                fontFamily: 'var(--font-heading)'
+                            }}>
+                                Break the records, Champ! 🏆
+                            </h3>
+                            <p style={{ color: 'var(--color-text-secondary)' }}>
+                                Your journey to greatness starts here. We can't wait to see what you achieve.
+                            </p>
                         </div>
 
                         <div className={styles.fomoSection} style={{ marginTop: '2rem' }}>
@@ -199,13 +214,15 @@ export default function Waitlist() {
                     {/* RIGHT: CONTENT */}
                     <div className={styles.contentSection}>
 
-                        {/* Testimonial Carousel (Static for now, can be animated later) */}
+                        {/* Testimonial Carousel */}
                         <div className={styles.testimonialCarousel}>
                             <p className={styles.testimonialQuote}>
                                 "I was invisible. Three months later, I got admitted to DU with quota + ₹2L sponsorship. This platform changed my life."
                             </p>
                             <div className={styles.testimonialAuthor}>
-                                <div className={styles.authorAvatar}>AK</div>
+                                <div className={styles.authorAvatar}>
+                                    <img src="/images/arjun.png" alt="Arjun" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                </div>
                                 <div className={styles.authorInfo}>
                                     <h4>Arjun Kumar</h4>
                                     <span>Badminton • Delhi</span>
